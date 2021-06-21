@@ -6,7 +6,9 @@
 
 import socket
 
-HOST = '10.130.167.108'     #获取本地主机名,cmd下用ipconfig命令查看
+#获取计算机名称
+hostname=socket.gethostname()
+HOST = socket.gethostbyname(hostname)     #获取本地主机名,cmd下用ipconfig命令查看
 PORT = 12345                #设置端口号
 ADDR = (HOST,PORT)　　　　　　#放在一起就是套接字了
 
